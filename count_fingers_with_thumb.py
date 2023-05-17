@@ -41,11 +41,11 @@ def countFingers(image, hand_landmarks, handNo=0):
                         fingers.append(0)
                         print("DEDO com id ",lm_index," está Fechado")
                 else:
-                    if thumb_tip_x > thumb_bottom_x:
+                    if thumb_tip_x < thumb_bottom_x:
                         fingers.append(1)
                         print("POLEGAR está Aberto")
 
-                    if thumb_tip_x < thumb_bottom_x:
+                    if thumb_tip_x > thumb_bottom_x:
                         fingers.append(0)
                         print("POLEGAR está Fechado")
 
